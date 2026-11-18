@@ -1,0 +1,137 @@
+/* Pebsteel deck: frame slides (1–21) rendered from shadow DOM, plus new CRM slides 25–27 */
+.slide.s-px{padding:0!important;background:#2a63cf}
+.slide.s-px::before{display:none}
+.slide.s-px>.px-host{position:absolute;inset:0;width:1920px;height:1080px}
+
+/* ---------- shared bits for new nl-app slides ---------- */
+.s-nlapp .shot{position:absolute;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08)}
+.s-nlapp .shot .url{height:38px;display:flex;align-items:center;gap:8px;padding:0 16px;background:#eef1f6;border-bottom:1px solid #dde2ea;font:500 14px/1 Inter,Roboto,sans-serif;color:#6b7385}
+.s-nlapp .shot .url i{width:11px;height:11px;border-radius:50%;background:#d5dae3;display:block}
+.s-nlapp .shot .url span{margin-left:14px;background:#fff;border-radius:6px;padding:6px 12px}
+.s-nlapp .shot .pic{position:relative}
+.s-nlapp .shot .pic img{display:block;width:100%;height:auto}
+/* highlight groups: only the newest revealed group stays lit */
+.s-nlapp .hlg{position:absolute;inset:0;pointer-events:none}
+.s-nlapp .hlg[data-build].on{opacity:0}
+.s-nlapp .hlg[data-build].on:not(:has(~ .hlg[data-build].on)){opacity:1}
+.s-nlapp .hl{position:absolute;border:3px solid #FB923C;border-radius:10px;background:rgba(251,146,60,.10);box-shadow:0 0 0 6px rgba(251,146,60,.18)}
+
+/* ---------- slide 25 · 11 kênh ---------- */
+.s-ch .ch-head{position:absolute;left:64px;right:64px;top:132px}
+.s-ch .ch-head h1{margin:0}
+.s-ch .ch-grid{position:absolute;left:64px;right:64px;top:290px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.s-ch .ch{display:grid;grid-template-columns:96px 1fr;gap:22px;align-items:center;padding:26px 26px;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);min-height:188px;box-sizing:border-box}
+.s-ch .ch img{width:96px;height:96px;border-radius:20px;display:block}
+.s-ch .ch b{display:block;font-size:26px;font-weight:600;color:#fff;line-height:1.2;margin-bottom:6px}
+.s-ch .ch span{font-size:19px;line-height:1.4;color:rgba(255,255,255,.7)}
+.s-ch .ch.inbox{grid-template-columns:1fr;background:rgba(251,146,60,.10);border-color:rgba(253,186,116,.6)}
+.s-ch .ch.inbox b{color:#FDBA74}
+.s-ch .ch-foot{position:absolute;left:64px;right:64px;bottom:70px;display:flex;align-items:center;gap:22px;font-size:22px;color:rgba(255,255,255,.75)}
+.s-ch .ch-foot::before{content:"";width:60px;height:2px;background:#60A5FA;flex:none}
+.s-ch .ch-foot b{color:#fff;font-weight:600}
+
+/* ---------- slide 27 · account ---------- */
+.s-acc .route{position:absolute;left:800px;right:0;top:0;border-radius:14px;background:#fff;color:#1b2335;padding:20px 22px;box-shadow:0 30px 70px rgba(0,0,0,.45);font-family:Inter,Roboto,sans-serif}
+.s-acc .route h4,.s-acc .ppl h4{margin:0 0 12px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a8396}
+.s-acc .route .new{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;padding:10px 12px;border-radius:10px;background:#f3f6fb}
+.s-acc .route .new small{margin-left:auto;font-size:14px;color:#7a8396;font-weight:500}
+.s-acc .route ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.s-acc .route li{display:flex;align-items:center;gap:10px;font-size:16px;padding:9px 12px;border-radius:10px;border:1px solid #e3e8f0}
+.s-acc .route li i{width:10px;height:10px;border-radius:50%;background:#c3cad6;flex:none}
+.s-acc .route li em{margin-left:auto;font-style:normal;font-size:14px;color:#7a8396}
+.s-acc .route li.to{border-color:#2b6be0;background:#eef4ff;font-weight:600}
+.s-acc .route li.to i{background:#2b6be0}
+.s-acc .route li.to em{color:#2b6be0;font-weight:600}
+.s-acc .ppl{position:absolute;left:800px;right:0;top:292px;bottom:0;border-radius:14px;background:#fff;color:#1b2335;padding:20px 22px;box-shadow:0 30px 70px rgba(0,0,0,.45);font-family:Inter,Roboto,sans-serif;box-sizing:border-box}
+.s-acc .ppl .c{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid #eef0f4}
+.s-acc .ppl .c:last-child{border-bottom:0}
+.s-acc .ppl .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:15px}
+.s-acc .ppl .nm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.s-acc .ppl .nm b{font-size:17px;font-weight:600}
+.s-acc .ppl .nm span{font-size:14.5px;color:#6b7385}
+.s-acc .ppl .rl{font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.s-acc .rl.d{background:#fde8e8;color:#b42318}.s-acc .rl.i{background:#fff4e0;color:#b45309}.s-acc .rl.p{background:#e8f0ff;color:#1d4ed8}.s-acc .rl.u{background:#e7f8ef;color:#047857}
+.s-acc .ppl.lit,.s-acc .route.lit{outline:3px solid #FB923C;outline-offset:4px}
+
+/* ---------- slide 32 · nuôi dưỡng ---------- */
+.s-nurt .stories{position:absolute;left:520px;right:0;top:400px;display:flex;align-items:flex-start;gap:18px;padding:16px 18px 18px;border-radius:16px;background:rgba(10,22,48,.92);border:1px solid rgba(253,186,116,.55);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.s-nurt .stories img{width:calc((100% - 36px)/3);height:auto;border-radius:10px;display:block;margin-top:30px}
+.s-nurt .stories .st-lbl{position:absolute;left:18px;top:12px;font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FDBA74}
+/* ---------- slide 34 · báo cáo ---------- */
+.s-rep .tblpop{z-index:3;outline:3px solid #FB923C;outline-offset:4px}
+.s-nlapp .nl-mock .mockhost{position:absolute;inset:0}
+/* ---------- slide 26 · bảng công ty (HTML) ---------- */
+.s-lead .crm{font-family:Inter,Roboto,"Segoe UI",sans-serif;color:#1f2937}
+.s-lead .crm .app{display:flex;background:#fff}
+.s-lead .crm .side{width:150px;flex:none;border-right:1px solid #e5e7eb;padding:10px 8px;display:flex;flex-direction:column;gap:4px;font-size:13px}
+.s-lead .crm .side .t{font-weight:700;font-size:13px;padding:6px 6px 10px;display:flex;justify-content:space-between;color:#111827}
+.s-lead .crm .side .it{padding:7px 8px;border-radius:7px;color:#374151}
+.s-lead .crm .side .it.on{background:#2B6BE0;color:#fff;font-weight:600}
+.s-lead .crm .side .dup{margin-top:4px}
+.s-lead .crm .main{flex:1;min-width:0}
+.s-lead .crm .top{height:44px;display:flex;align-items:center;gap:12px;padding:0 12px;border-bottom:1px solid #eef0f4;font-size:12.5px;color:#4b5563;white-space:nowrap}
+.s-lead .crm .top b{color:#111827}
+.s-lead .crm .top .cnt{font-weight:600;color:#6b7280}
+.s-lead .crm .sp{flex:1}
+.s-lead .crm .seg{display:flex;border:1px solid #e5e7eb;border-radius:7px;overflow:hidden}
+.s-lead .crm .seg>*{padding:5px 10px;font-size:12px}
+.s-lead .crm .seg b{background:#EFF4FF;color:#2B6BE0}
+.s-lead .crm .srch{border:1px solid #e5e7eb;border-radius:7px;padding:5px 10px;width:150px;color:#9ca3af}
+.s-lead .crm .btn{border:1px solid #e5e7eb;border-radius:7px;padding:5px 10px;color:#111827;font-weight:600}
+.s-lead .crm .btn.pri{background:#2B6BE0;border-color:#2B6BE0;color:#fff}
+.s-lead .crm .tools{height:36px;display:flex;align-items:center;gap:18px;padding:0 14px;border-bottom:1px solid #eef0f4;font-size:12.5px;color:#4b5563;white-space:nowrap}
+.s-lead .crm .tools em{font-style:normal;background:#f3f4f6;border-radius:4px;padding:0 5px;font-size:11px}
+.s-lead .crm .tools .pg b{background:#EFF4FF;color:#2B6BE0;border-radius:5px;padding:2px 7px}
+.s-lead .crm table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px}
+.s-lead .crm th{height:30px;text-align:left;font-size:10.5px;font-weight:600;letter-spacing:.04em;color:#6b7280;background:#f9fafb;border-bottom:1px solid #e5e7eb;padding:0 8px;white-space:nowrap;overflow:hidden}
+.s-lead .crm td{height:30px;padding:0 8px;border-bottom:1px solid #f1f3f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#374151}
+.s-lead .crm td.nm{display:flex;align-items:center;gap:8px;height:30px}
+.s-lead .crm td.nm b{font-weight:500;color:#111827;overflow:hidden;text-overflow:ellipsis}
+.s-lead .crm .cb{display:inline-block;width:13px;height:13px;border:1.5px solid #cbd5e1;border-radius:3px}
+.s-lead .crm .av{width:20px;height:20px;border-radius:50%;flex:none;display:inline-grid;place-items:center;color:#fff;font-size:8.5px;font-weight:700}
+.s-lead .crm .av.sm{width:18px;height:18px;font-size:8px}
+.s-lead .crm .ow{display:inline-flex;align-items:center;gap:6px}
+.s-lead .crm img.cl{height:20px;width:auto;display:block}
+.s-lead .crm .st{display:inline-block;font-size:11px;font-weight:600;border-radius:5px;padding:2px 7px}
+.s-lead .crm .st.ok{background:#E8F5E9;color:#2E7D32}
+.s-lead .crm .st.fail{background:#FDECEC;color:#C62828}
+/* ---------- slide 27 · sơ đồ tổ chức ---------- */
+.s-acc .org{position:absolute;left:800px;right:0;top:292px;bottom:0;border-radius:14px;background:#F8FAFC;background-image:radial-gradient(#E2E8F0 1px,transparent 1px);background-size:16px 16px;color:#1b2335;box-shadow:0 30px 70px rgba(0,0,0,.45);font-family:Inter,Roboto,sans-serif;overflow:hidden}
+.s-acc .org .oh{position:absolute;left:0;right:0;top:0;height:40px;display:flex;align-items:center;gap:10px;padding:0 16px;background:#fff;border-bottom:1px solid #e5e7eb}
+.s-acc .org .oh b{font-size:15px}
+.s-acc .org .oh span{margin-left:auto;font-size:12px;color:#6b7280}
+.s-acc .org .lines{position:absolute;inset:0;width:100%;height:100%}
+.s-acc .oc{position:absolute;background:#fff;border:1px solid #e2e8f0;border-radius:8px;box-shadow:0 4px 12px -6px rgba(15,23,42,.25);padding:9px 10px;display:grid;gap:3px;box-sizing:border-box}
+.s-acc .oc .hd{display:flex;gap:8px;align-items:center;margin-bottom:2px}
+.s-acc .oc .av{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700}
+.s-acc .oc b{display:block;font-size:13.5px;font-weight:600;line-height:1.2}
+.s-acc .oc small{display:block;font-size:11px;color:#6b7280;line-height:1.3}
+.s-acc .oc .ct{font-size:11px;color:#374151;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s-acc .oc .tg{justify-self:start;margin-top:3px;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:4px;border:1px solid}
+.s-acc .tg.d{color:#DC2626;border-color:#FCA5A5;background:#FEF2F2}
+.s-acc .tg.i{color:#15803D;border-color:#86EFAC;background:#F0FDF4}
+.s-acc .tg.p{color:#DC2626;border-color:#FCA5A5;background:#fff}
+.s-acc .tg.u{color:#7C3AED;border-color:#C4B5FD;background:#F5F3FF}
+.s-acc .note{position:absolute;width:118px;height:auto;bottom:auto;right:auto;box-sizing:border-box;padding:9px 10px;font-size:11.5px;line-height:1.35;background:#FEF3A7;color:#3f3a1a;box-shadow:2px 3px 8px rgba(0,0,0,.18)}
+.s-acc .note.g{background:#B9E6DD}
+.s-acc .dept{position:absolute;background:#F8FAFC;padding:0 4px;box-sizing:border-box;width:166px;text-align:center;font-size:10.5px;font-weight:700;letter-spacing:.06em;color:#475569}
+.s-acc .link{position:absolute;font-size:11px;font-weight:600;color:#fff;background:#7C3AED;border-radius:4px;padding:4px 8px}
+.s-acc .vac{position:absolute;right:8px;display:flex;align-items:center;gap:16px;padding:9px 12px;border:1px dashed #94A3B8;border-radius:8px;background:#fff;font-size:11.5px;color:#475569}.s-acc .vac b{font-size:12px;color:#111827}
+.slide.p8w-sec.four .cards{grid-template-columns:repeat(4,1fr)}
+.slide.p8c-sec.three .cards{grid-template-columns:repeat(3,1fr)}
+/* ---------- panes theo bước (AgentHub, E-Hiring) ---------- */
+.s-hp .nl-mock .sp{position:absolute}
+.s-hp .spi{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);background:#fff}
+.s-hp .spi img{display:block;width:100%;height:auto}
+.s-hp .sh{position:absolute;border:3px solid #FB923C;border-radius:10px;background:rgba(251,146,60,.08);box-shadow:0 0 0 6px rgba(251,146,60,.16)}
+.s-hp .src{position:absolute;left:0;right:0;top:0;height:104px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(253,186,116,.5);box-sizing:border-box}
+.s-hp .src b{width:100%;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#FDBA74}
+.s-hp .src span{font-size:17px;font-weight:600;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 14px}
+.s-hp .arr{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.s-hp .cvs{position:absolute;left:84px;top:290px;width:212px;display:grid;gap:10px;z-index:4}
+.s-hp .cv{background:#fff;border-left:4px solid #FB923C;border-radius:8px;padding:9px 12px;box-shadow:0 10px 24px rgba(0,0,0,.35);display:grid;gap:2px;font-family:Roboto,sans-serif}
+.s-hp .cv b{font-size:15px;color:#111827}
+.s-hp .cv small{font-size:12.5px;color:#C2410C;font-weight:600}
+.s-hp .poolcap{position:absolute;right:16px;bottom:452px;font-size:17px;font-weight:700;color:#FDBA74;z-index:4;white-space:nowrap;background:rgba(10,22,48,.92);border:1px solid #FDBA74;border-radius:8px;padding:5px 12px}
+.s-hp .mv{position:absolute;left:20px;bottom:-40px;font-size:19px;color:#fff;background:rgba(10,22,48,.9);border:1px solid #FDBA74;border-radius:10px;padding:10px 16px}
+.s-hp .mv b{color:#FDBA74}

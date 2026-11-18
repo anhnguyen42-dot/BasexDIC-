@@ -1,0 +1,25 @@
+/* Slide ứng dụng bản dài · bố cục theo deck Agentic OS của Ngọc Lê: dải bối cảnh, cột chữ có bước, mock lớn */
+.slide.s-nlapp{padding:0;font-family:"Inter Variable",Inter,Roboto,"Segoe UI",sans-serif;
+ background:radial-gradient(1100px 700px at 85% 0%,rgba(59,130,246,.20),transparent 60%),radial-gradient(900px 700px at 0% 100%,rgba(99,102,241,.20),transparent 60%),linear-gradient(160deg,#0A1630 0%,#0D1D40 60%,#111F48 100%)}
+.s-nlapp .nl-top{position:absolute;left:64px;right:64px;top:38px;display:flex;align-items:center;gap:20px;font-size:23px;color:rgba(255,255,255,.8);z-index:5}
+.s-nlapp .nl-top .bv{display:flex;align-items:center;gap:11px;font-weight:700;color:#fff;font-size:25px;white-space:nowrap}
+.s-nlapp .nl-top .bv img{height:30px;border-radius:7px}
+.s-nlapp .nl-top .tag{margin-left:auto;font-size:15px;color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.s-nlapp .nl-l{position:absolute;left:64px;top:132px;width:430px;bottom:70px;display:flex;flex-direction:column}
+.s-nlapp .nl-eye{font-size:16px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#60A5FA;margin:0 0 14px}
+.s-nlapp h1{font-size:44px;line-height:1.14;font-weight:700;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}
+.s-nlapp h1 .ac{background:linear-gradient(90deg,#8ECBFF,#A78BFA);-webkit-background-clip:text;background-clip:text;color:transparent}
+.s-nlapp.g-crm h1 .ac{background:linear-gradient(90deg,#FFC46B,#FF8A8A);-webkit-background-clip:text;background-clip:text}
+.s-nlapp.g-hrm h1 .ac{background:linear-gradient(90deg,#9FF0C0,#66B4F0);-webkit-background-clip:text;background-clip:text}
+.s-nlapp.g-crm .nl-eye{color:#FDBA74}.s-nlapp.g-hrm .nl-eye{color:#6EE7B7}
+.s-nlapp .nl-steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:2px;counter-reset:s}
+.s-nlapp .nl-steps li{counter-increment:s;display:grid;grid-template-columns:38px 1fr;gap:4px;padding:10px 12px;border-left:3px solid transparent;color:rgba(255,255,255,.38);font-size:17.5px;line-height:1.45;opacity:1!important;transform:none!important;transition:color .4s,background .4s,border-color .4s}
+.s-nlapp .nl-steps li::before{content:counter(s,decimal-leading-zero);font-size:14px;font-weight:700;padding-top:3px}
+.s-nlapp .nl-steps li b{font-weight:600}
+.s-nlapp .nl-steps li.on{color:rgba(255,255,255,.62)}
+.s-nlapp .nl-steps li.on:not(:has(~ li.on)){color:#fff;border-left-color:#60A5FA;background:linear-gradient(90deg,rgba(59,130,246,.16),transparent)}
+.s-nlapp.g-crm .nl-steps li.on:not(:has(~ li.on)){border-left-color:#FDBA74;background:linear-gradient(90deg,rgba(251,146,60,.14),transparent)}
+.s-nlapp.g-hrm .nl-steps li.on:not(:has(~ li.on)){border-left-color:#6EE7B7;background:linear-gradient(90deg,rgba(52,211,153,.13),transparent)}
+.s-nlapp .nl-steps li.on:not(:has(~ li.on))::before{color:#93C5FD}
+.s-nlapp .nl-mock{position:absolute;left:530px;right:52px;top:118px;bottom:56px}
+.s-nlapp .nl-mock iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent}

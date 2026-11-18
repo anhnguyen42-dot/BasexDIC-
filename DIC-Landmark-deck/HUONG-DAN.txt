@@ -1,0 +1,9 @@
+DECK BASE.VN × DIC STAR LANDMARK VŨNG TÀU · BẢN TRÌNH CHIẾU OFFLINE
+
+1. Giải nén toàn bộ file zip vào một thư mục (giữ nguyên các thư mục css, js, img, assets).
+2. Mở file index.html bằng Chrome hoặc Edge. Không cần mạng.
+3. Trình chiếu:
+   - Phím → / Space: slide tiếp theo · ← : slide trước
+   - Phím F: toàn màn hình
+   - Phóng to: Ctrl/Cmd + cuộn chuột, hoặc phím + − 0; kéo để di chuyển. Đổi slide thì tự về 100%.
+4. Sửa nhanh tên khách, logo, danh mục quy trình: mở js/client.js bằng trình soạn thảo văn bản.

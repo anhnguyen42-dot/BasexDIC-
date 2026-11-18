@@ -1,0 +1,122 @@
+/* ===== Slide riêng DIC Landmark (tiền tố q) ===== */
+/* --- Bối cảnh: Landmark là toà làm mẫu --- */
+.qctx{left:96px;top:250px;width:1060px;height:640px}
+.qctx .qn{position:absolute;background:#fff;color:var(--ink);border-radius:16px;box-shadow:0 30px 60px -30px rgba(10,30,90,.7);padding:16px 22px}
+.qctx .qn b{display:block;font-size:24px;line-height:1.2}
+.qctx .qn small{display:block;font-size:16px;color:#5A6680;margin-top:4px;line-height:1.35}
+.qctx .qn.top{left:330px;top:0;width:400px;text-align:center}
+.qctx .qn.mid{left:250px;top:150px;width:560px;text-align:center;background:#EAF2FE}
+.qctx .qn.mid em{display:inline-block;margin-top:8px;font-style:normal;font-size:14px;font-weight:800;letter-spacing:.12em;color:#fff;background:var(--hh-red);padding:4px 12px;border-radius:999px}
+.qctx .qbl{position:absolute;left:0;right:0;top:360px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.qctx .qb{background:rgba(255,255,255,.12);border:2px dashed rgba(255,255,255,.55);border-radius:16px;padding:18px 18px;color:#fff;min-height:170px}
+.qctx .qb b{display:block;font-size:22px;line-height:1.25}
+.qctx .qb small{display:block;font-size:16px;color:var(--t2);margin-top:6px;line-height:1.4}
+.qctx .qb i{display:inline-block;margin-top:12px;font-style:normal;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3)}
+.qctx .qb.on{background:#fff;border:3px solid #FFB020;color:var(--ink);box-shadow:0 0 0 8px rgba(255,176,32,.25),0 30px 60px -30px rgba(10,30,90,.7)}
+.qctx .qb.on small{color:#4A5468}
+.qctx .qb.on i{color:#fff;background:#E08A00;padding:4px 10px;border-radius:999px}
+.qctx svg{position:absolute;left:0;top:0}
+.qside{left:1210px;top:250px;width:614px}
+/* --- Bài toán 1: sơ đồ trên giấy, định biên trên Excel --- */
+.qorg{left:770px;top:250px;width:560px;height:430px;transform:rotate(-2deg)}
+.qorg svg{display:block}
+.qxl{left:1270px;top:470px;width:560px;transform:rotate(1.5deg)}
+.qxl td.ce{text-align:center}
+/* --- Mock ứng dụng chung --- */
+.qapp{position:absolute;inset:0;display:flex;font-family:Roboto,Arial,sans-serif;color:#1d2433;background:#F4F6FA}
+.qapp .qside-nav{width:206px;flex:none;background:#fff;border-right:1px solid #E3E8F0;padding:14px 10px;display:flex;flex-direction:column;gap:3px;font-size:14px}
+.qapp .qside-nav .qlogo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px;color:#143A86;padding:4px 8px 12px}
+.qapp .qside-nav .qlogo img{width:26px;height:26px}
+.qapp .qside-nav span{padding:7px 10px;border-radius:8px;color:#4A5468}
+.qapp .qside-nav span.on{background:#EAF2FE;color:#1F4EAF;font-weight:700}
+.qapp .qside-nav h6{margin:12px 10px 4px;font-size:11px;letter-spacing:.12em;color:#98A2B3;font-weight:700}
+.qapp .qmain{flex:1;min-width:0;display:flex;flex-direction:column}
+.qapp .qtop{display:flex;align-items:center;gap:14px;padding:14px 22px;background:#fff;border-bottom:1px solid #E3E8F0}
+.qapp .qtop h3{margin:0;font-size:21px;color:#143A86}
+.qapp .qtop .qtabs{display:flex;gap:4px;margin-left:18px}
+.qapp .qtop .qtabs span{font-size:14px;padding:6px 12px;border-radius:8px;color:#5A6680}
+.qapp .qtop .qtabs span.on{background:#143A86;color:#fff;font-weight:700}
+.qapp .qtop .qbtn{margin-left:auto;font-size:14px;font-weight:700;color:#fff;background:#3477D8;padding:8px 14px;border-radius:8px}
+.qapp .qtop .qbtn.g{background:#fff;color:#1F4EAF;border:1px solid #C9D7EE;margin-left:0}
+/* --- Sơ đồ tổ chức --- */
+.qtree{position:relative;flex:1;padding:22px 26px 10px}
+.qtree .qnode{position:absolute;background:#fff;border:1px solid #DCE3EE;border-radius:12px;padding:10px 12px;box-shadow:0 8px 20px -14px rgba(20,40,90,.5)}
+.qtree .qnode .t{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.1em;color:#7A869A;text-transform:uppercase}
+.qtree .qnode b{display:block;font-size:16px;line-height:1.25;color:#143A86;margin-top:3px}
+.qtree .qnode .pp{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:13px;color:#4A5468}
+.qtree .qnode .pp i{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;color:#fff;background:#3477D8;flex:none}
+.qtree .qnode .hc{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12.5px;color:#5A6680}
+.qtree .qnode .hc u{flex:1;height:6px;border-radius:3px;background:#E8EDF5;position:relative;overflow:hidden;text-decoration:none}
+.qtree .qnode .hc u s{position:absolute;left:0;top:0;bottom:0;background:#22A06B;border-radius:3px}
+.qtree .qnode .hc u s.w{background:#F5A524}
+.qtree .qnode.hl{border:2px solid #3477D8;box-shadow:0 0 0 5px rgba(52,119,216,.15)}
+.qtree .qnode.dim{opacity:.92}
+.qtree .qnode.ai{background:linear-gradient(135deg,#F3ECFF,#fff);border:1.5px dashed #7C4DDB}
+.qtree .qnode.ai b{color:#5B2DB8}
+.qtree .qnode.ai .pp i{background:#7C4DDB}
+.qtree .open{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;color:#C8392B;background:#FDECEA;border-radius:999px;padding:1px 8px}
+.qtree svg.ln{position:absolute;left:0;top:0;overflow:visible}
+/* --- Bảng vị trí --- */
+.qpos{flex:1;display:flex;min-height:0}
+.qpos .ql{flex:1;min-width:0;padding:14px 18px;display:flex;flex-direction:column;gap:10px}
+.qpos .qst{display:flex;gap:6px;font-size:13.5px}
+.qpos .qst span{padding:6px 12px;border-radius:999px;background:#fff;border:1px solid #DCE3EE;color:#4A5468}
+.qpos .qst span b{margin-left:6px;color:#143A86}
+.qpos .qst span.on{background:#143A86;color:#fff;border-color:#143A86}
+.qpos .qst span.on b{color:#fff}
+.qpos table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:14px}
+.qpos th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#7A869A;padding:9px 10px;background:#F7F9FC;border-bottom:1px solid #E3E8F0}
+.qpos td{padding:9px 10px;border-bottom:1px solid #EEF1F6;white-space:nowrap}
+.qpos td.c{color:#7A869A;font-size:13px}
+.qpos tr.sel td{background:#EAF2FE}
+.qpos .qch{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px}
+.qpos .qch.f{background:#DFF5EA;color:#1E7A4C}
+.qpos .qch.o{background:#FDECEA;color:#C8392B}
+.qpos .qch.h{background:#FFF4D6;color:#9A6200}
+.qpos .qch.x{background:#EEF1F6;color:#7A869A}
+.qpos .pr{font-size:11.5px;font-weight:800;color:#C8392B;margin-left:6px}
+.qpos .qfoot{font-size:13.5px;color:#5A6680;padding:4px 2px}
+.qpos .qdr{width:470px;flex:none;background:#fff;border-left:1px solid #E3E8F0;padding:18px 20px;display:flex;flex-direction:column;gap:14px;overflow:hidden}
+.qpos .qdr h4{margin:0;font-size:20px;color:#143A86}
+.qpos .qdr .qsb{font-size:13.5px;color:#5A6680;margin-top:-8px}
+.qpos .qdr .blk{border:1px solid #E3E8F0;border-radius:10px;padding:12px 14px}
+.qpos .qdr .blk h5{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#7A869A}
+.qpos .qdr .qkv{display:grid;grid-template-columns:130px 1fr;gap:5px 10px;font-size:14px}
+.qpos .qdr .qkv span{color:#7A869A}
+.qpos .qdr .rng{position:relative;height:8px;border-radius:4px;background:linear-gradient(90deg,#DCE8FB,#3477D8);margin:16px 0 6px}
+.qpos .qdr .rng i{position:absolute;top:-6px;width:4px;height:20px;border-radius:2px;background:#C8392B}
+.qpos .qdr .rngl{display:flex;justify-content:space-between;font-size:12.5px;color:#5A6680}
+.qpos .qdr ul{margin:0;padding-left:18px;font-size:14px;line-height:1.55;color:#36405A}
+/* --- Ba loại việc --- */
+.q3{left:96px;right:96px;top:250px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.q3 .c{background:#fff;border-radius:22px;padding:26px 28px;color:var(--ink);display:flex;flex-direction:column;gap:12px;box-shadow:0 40px 80px -40px rgba(10,30,90,.7);min-height:500px}
+.q3 .c .k{align-self:flex-start;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--bar);padding:5px 12px;border-radius:999px}
+.q3 .c h3{margin:0;font-size:30px;line-height:1.2}
+.q3 .c .app{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;font-size:16px;font-weight:700;background:#EEF4FD;border-radius:999px;padding:5px 14px 5px 6px}
+.q3 .c .app img{width:26px;height:26px}
+.q3 .c ul{margin:4px 0 0;padding-left:22px;font-size:19px;line-height:1.5;color:#36405A}
+.q3 .c ul li{margin-bottom:6px}
+.q3 .c .m{margin-top:auto;border-top:1px dashed #C9D7EE;padding-top:12px;font-size:17px;line-height:1.45;color:#36405A}
+.q3 .c .m b{display:block;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--bar);margin-bottom:2px}
+/* --- Project board --- */
+.qpj{flex:1;display:flex;flex-direction:column;min-height:0}
+.qpj .hdx{display:flex;align-items:center;gap:26px;padding:12px 22px;background:#fff;border-bottom:1px solid #E3E8F0;font-size:14px;color:#5A6680}
+.qpj .hdx b{color:#143A86;font-size:15px}
+.qpj .hdx .bar{width:220px;height:8px;border-radius:4px;background:#E8EDF5;position:relative;overflow:hidden}
+.qpj .hdx .bar s{position:absolute;left:0;top:0;bottom:0;width:46%;background:#3477D8}
+.qpj .hdx .av{display:flex}
+.qpj .hdx .av i{width:28px;height:28px;border-radius:50%;margin-left:-6px;border:2px solid #fff;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;color:#fff}
+.qpj .cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:16px 20px;min-height:0}
+.qpj .col{background:#EDF1F7;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:9px}
+.qpj .col h5{margin:2px 4px 2px;font-size:14px;color:#143A86;display:flex;justify-content:space-between}
+.qpj .col h5 em{font-style:normal;color:#7A869A;font-weight:600}
+.qpj .cd{background:#fff;border-radius:10px;padding:10px 12px;border:1px solid #E3E8F0;font-size:14px}
+.qpj .cd b{display:block;font-size:14.5px;line-height:1.3;color:#1d2433}
+.qpj .cd .r{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12.5px;color:#5A6680}
+.qpj .cd .r i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:700;color:#fff;flex:none}
+.qpj .cd .r .qs{margin-left:auto;font-weight:700;border-radius:999px;padding:1px 8px;font-size:11.5px}
+.qpj .qs.qd{background:#DFF5EA;color:#1E7A4C}.qpj .qs.qp{background:#E6EEFC;color:#1F4EAF}.qpj .qs.qn{background:#EEF1F6;color:#7A869A}.qpj .qs.ql{background:#FDECEA;color:#C8392B}
+.qpj .cd.qlate{border:2px solid #C8392B;box-shadow:0 0 0 4px rgba(200,57,43,.12)}
+.qpj .cd .pg{height:5px;border-radius:3px;background:#E8EDF5;margin-top:8px;position:relative;overflow:hidden}
+.qpj .cd .pg s{position:absolute;left:0;top:0;bottom:0;background:#3477D8}
+.qcall{position:absolute;z-index:6}
